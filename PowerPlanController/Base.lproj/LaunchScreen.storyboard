@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wu1-UV-ULy">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X1t-rB-0CT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="UHq-om-Fnm"/>
+                                    <constraint firstAttribute="height" constant="196" id="p75-JQ-wIn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UHq-om-Fnm"/>
+                                        <exclude reference="p75-JQ-wIn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UHq-om-Fnm"/>
+                                        <include reference="p75-JQ-wIn"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wu1-UV-ULy" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="EsD-Ds-Lmc">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Wu1-UV-ULy" secondAttribute="bottom" id="X7T-xb-Sfi"/>
+                            <constraint firstItem="Wu1-UV-ULy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="XbI-ZI-Hyd"/>
+                            <constraint firstItem="X1t-rB-0CT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="m2V-iu-Cv6"/>
+                            <constraint firstAttribute="trailing" secondItem="Wu1-UV-ULy" secondAttribute="trailing" id="o5o-d1-4YA"/>
+                            <constraint firstItem="X1t-rB-0CT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="u8K-MM-LL6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Wu1-UV-ULy"/>
+                                <exclude reference="X1t-rB-0CT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EsD-Ds-Lmc"/>
+                                <exclude reference="XbI-ZI-Hyd"/>
+                                <exclude reference="o5o-d1-4YA"/>
+                                <exclude reference="m2V-iu-Cv6"/>
+                                <exclude reference="u8K-MM-LL6"/>
+                                <exclude reference="X7T-xb-Sfi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Wu1-UV-ULy"/>
+                                <include reference="X1t-rB-0CT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EsD-Ds-Lmc"/>
+                                <include reference="XbI-ZI-Hyd"/>
+                                <include reference="o5o-d1-4YA"/>
+                                <include reference="m2V-iu-Cv6"/>
+                                <include reference="u8K-MM-LL6"/>
+                                <include reference="X7T-xb-Sfi"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.png" width="800" height="1386"/>
+        <image name="logo.png" width="974" height="811"/>
+    </resources>
 </document>

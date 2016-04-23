@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HomeController.h"
+#import "LoginController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"]!=nil) {
+        HomeController *homecontroller = [storyBoard instantiateViewControllerWithIdentifier:@"HomeController"];
+        [(UINavigationController *)self.window.rootViewController pushViewController:homecontroller animated:NO];
+    }
+    else
+    {
+        LoginController *logincontroller = [storyBoard instantiateViewControllerWithIdentifier:@"LoginController"];
+        [(UINavigationController *)self.window.rootViewController pushViewController:logincontroller animated:NO];
+    }
     return YES;
 }
 
