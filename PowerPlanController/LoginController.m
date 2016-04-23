@@ -24,6 +24,7 @@
     self.view_login.layer.cornerRadius = 2;
     self.txt_email.delegate =self;
     self.txt_password.delegate =self;
+    NSLog(@"This is test for git");
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
