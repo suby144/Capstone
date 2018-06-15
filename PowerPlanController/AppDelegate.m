@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"This is didfinish launching with options");
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"]!=nil) {
         HomeController *homecontroller = [storyBoard instantiateViewControllerWithIdentifier:@"HomeController"];

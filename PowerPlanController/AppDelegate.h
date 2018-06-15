@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//Clone using xcode
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
